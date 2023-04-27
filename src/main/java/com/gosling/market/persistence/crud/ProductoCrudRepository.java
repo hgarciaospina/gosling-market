@@ -14,6 +14,6 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
     @Query(value = "SELECT * FROM productos WHERE id_categoria = ?", nativeQuery = true)
     List<Producto> getByIdCategoria(int idCategoria);
 
-    //Lista productos cuya cantidad es menor a la ingreasada por parámetro y estánj activos
+    //Lista productos cuya cantidad es menor a la ingresada por parámetro y estánj activos
     Optional<List<Producto>> findByCantidadStockLessThanEstado(int cantidadStock, boolean estado);
 }
