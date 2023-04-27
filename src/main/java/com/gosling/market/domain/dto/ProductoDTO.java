@@ -6,19 +6,19 @@ import javax.persistence.Column;
 import javax.validation.constraints.Size;
 
 public class ProductoDTO {
-    private int idProducto;
+    private Integer idProducto;
     private String descripcion;
-    private int idCategoria;
+    private Integer idCategoria;
     private Categoria categoria;
-    private double precioVenta;
-    private int cantidadStock;
-    private boolean estado;
+    private Double precioVenta;
+    private Integer cantidadStock;
+    private Boolean estado;
 
-    public int getIdProducto() {
+    public Integer getIdProducto() {
         return idProducto;
     }
 
-    public void setIdProducto(int idProducto) {
+    public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
 
@@ -30,11 +30,11 @@ public class ProductoDTO {
         this.descripcion = descripcion;
     }
 
-    public int getIdCategoria() {
+    public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
+    public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
@@ -46,27 +46,27 @@ public class ProductoDTO {
         this.categoria = categoria;
     }
 
-    public double getPrecioVenta() {
+    public Double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(double precioVenta) {
+    public void setPrecioVenta(Double precioVenta) {
         this.precioVenta = precioVenta;
     }
 
-    public int getCantidadStock() {
+    public Integer getCantidadStock() {
         return cantidadStock;
     }
 
-    public void setCantidadStock(int cantidadStock) {
+    public void setCantidadStock(Integer cantidadStock) {
         this.cantidadStock = cantidadStock;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 }

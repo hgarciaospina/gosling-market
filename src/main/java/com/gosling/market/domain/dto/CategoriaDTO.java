@@ -1,15 +1,15 @@
 package com.gosling.market.domain.dto;
 
 public class CategoriaDTO {
-    private int idCategoria;
+    private Integer idCategoria;
     private String descripcion;
-    private boolean estado;
+    private Boolean estado;
 
-    public int getIdCategoria() {
+    public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
+    public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
@@ -21,11 +21,11 @@ public class CategoriaDTO {
         this.descripcion = descripcion;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 }

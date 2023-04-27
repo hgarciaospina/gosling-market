@@ -26,26 +26,26 @@ public class ProductoRepository implements IProductoRepositorio {
         return productoMapper.toProductosDTO(productos);
     }
     @Override
-    public Optional<List<ProductoDTO>> getByCategoria(int idCategoria) {
+    public Optional<List<ProductoDTO>> getByCategoria(Integer idCategoria) {
         List<Producto>  productos = productoCrudRepository.findByIdCategoriaOrderByDescripcionAsc(idCategoria);
         return Optional.of(productoMapper.toProductosDTO(productos));
     }
 
     @Override
-    public Optional<List<ProductoDTO>> getStockBajo(int cantidadStock) {
+    public Optional<List<ProductoDTO>> getStockBajo(Integer cantidadStock) {
         Optional<List<Producto>> productos = productoCrudRepository.findByCantidadStockLessThanEstado(cantidadStock, true);
         //La operación map devuelve un Optional
         return productos.map(prods -> productoMapper.toProductosDTO(prods));
     }
    @Override
-   public Optional<ProductoDTO> getProducto(int idProducto) {
+   public Optional<ProductoDTO> getProducto(Integer idProducto) {
 
         return productoCrudRepository.findById(idProducto)
                 .map(producto -> productoMapper.toProductoDTO(producto));
    }
 
     @Override
-    public void delete(int idProducto) {
+    public void delete(Integer idProducto) {
         productoCrudRepository.deleteById(idProducto);
     }
     @Override
