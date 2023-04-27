@@ -1,11 +1,11 @@
 package com.gosling.market.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "categorias")
 public class Categoria {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
@@ -13,6 +13,14 @@ public class Categoria {
     @Column(nullable = false)
     private String descripcion;
     private Boolean estado;
+
+    /* Relaciones */
+
+    /* mappedBy corresponde al nombre del atributo de la entity
+       Categoria en la entity Producto --> categoria.
+    */
+    @OneToMany(mappedBy = "categoria" )
+    private List<Producto> productos;
 
     public String getIdCategoria() {
         return idCategoria;

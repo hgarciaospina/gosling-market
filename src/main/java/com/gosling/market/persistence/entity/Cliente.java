@@ -1,6 +1,7 @@
 package com.gosling.market.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Clientes")
@@ -22,6 +23,14 @@ public class Cliente {
 
     @Column(name = "correo_electronico", length = 100)
     private String correoElectronico;
+
+    /* Relaciones */
+
+    /* mappedBy corresponde al nombre del atributo de la entity
+       Cliente en la entity Compra --> cliente.
+    */
+    @OneToMany(mappedBy = "cliente" )
+    private List<Compra> compras;
 
     public Integer getId() {
         return id;
