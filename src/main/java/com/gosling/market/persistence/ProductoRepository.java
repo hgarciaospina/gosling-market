@@ -15,6 +15,11 @@ public class ProductoRepository implements IProductoRepositorio {
     private ProductoCrudRepository productoCrudRepository;
     private ProductoMapper productoMapper;
 
+    public ProductoRepository(ProductoCrudRepository productoCrudRepository, ProductoMapper productoMapper) {
+        this.productoCrudRepository = productoCrudRepository;
+        this.productoMapper = productoMapper;
+    }
+
     @Override
     public List<ProductoDTO> getAll() {
         List<Producto>  productos = (List<Producto> )productoCrudRepository.findAll();
