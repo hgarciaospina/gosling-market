@@ -12,6 +12,6 @@ public interface IProductoRepositorio {
     Optional <List<ProductoDTO>> getByCategoria(int idCategoria);
     Optional<List<ProductoDTO>> getStockBajo(int cantidadStock);
     Optional<ProductoDTO> getProducto(int idProducto);
-    Producto save(ProductoDTO productoDTO);
+    ProductoDTO save(ProductoDTO productoDTO);
     void delete(int idProducto);
 }

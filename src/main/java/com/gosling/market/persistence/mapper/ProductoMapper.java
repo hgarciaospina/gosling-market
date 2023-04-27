@@ -31,11 +31,5 @@ public interface ProductoMapper {
     Producto toProducto(ProductoDTO productoDTO);
 
     //Recibe una lista de productos y la convierte a una lista de ProductoDTO
-    List<ProductoDTO> toProductos(List<Producto> productos);
-
-
-
-
-
-
+    List<ProductoDTO> toProductosDTO(List<Producto> productos);
 }
